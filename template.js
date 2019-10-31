@@ -28,6 +28,10 @@ const indexTep = `
   import styles from './styles';
 
   export default class ${firstUpperCase(fileName)} extends PureComponent {
+    static defaultProps = {};
+
+    static propTypes = {};
+  
     render () {
       return (
         <View style={styles.container}>
