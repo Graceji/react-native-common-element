@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   backIcon: {
-    marginLeft: -20,
-    padding: 20,
+    // marginLeft: 20,
+    // padding: 20,
   }
 });
 

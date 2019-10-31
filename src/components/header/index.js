@@ -58,7 +58,7 @@ export default class RNHeader extends PureComponent {
       >
         <StatusBar barStyle={barStyle} {...statusBarProps} />
         <Children
-          style={[{ flex: 1 }, leftContainerStyle]}
+          containerStyle={[{ flex: 1 }, leftContainerStyle]}
           placement="left"
         >
           {
@@ -66,34 +66,37 @@ export default class RNHeader extends PureComponent {
             || children[0]
             || leftComponent
             || (navigation && (
-              <TouchableOpacity style={[styles.backIcon, backIconStyle]}>
-                {
+              <TouchableOpacity style={[styles.backIcon, backIconStyle]}
+                // onPress={}
+              >
+                <Icon name="angle-left" size={40} color="#333" />
+                {/* {
                   backIcon
-                  || <Icon name="angle-left" size={20} color="#333" />
-                }
+                  || <Icon name="angle-left" size={40} color="#333" />
+                } */}
               </TouchableOpacity>
             ))
             || null
           }
         </Children>
         <Children
-          style={[{ flex: 3 }, centerContainerStyle]}
+          containerStyle={[{ flex: 3 }, centerContainerStyle]}
           placement="center"
         >
           {
             (children && React.isValidElement(children))
-            || children[0]
+            || children[1]
             || centerComponent
             || null
           }
         </Children>
         <Children
-          style={[{ flex: 1 }, rightContainerStyle]}
+          containerStyle={[{ flex: 1 }, rightContainerStyle]}
           placement="right"
         >
           {
             (children && React.isValidElement(children))
-            || children[0]
+            || children[2]
             || rightComponent
             || null
           }
