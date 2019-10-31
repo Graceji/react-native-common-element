@@ -3,7 +3,7 @@
   import PropTypes from 'prop-types';
   import { View, Text } from 'react-native';
   import styles from './styles';
-  import { nodeType } from '../../../../utils';
+  import { nodeType, renderNode } from '../../../../utils';
 
   const ALIGN_STYLE = {
     left: 'flex-start',
