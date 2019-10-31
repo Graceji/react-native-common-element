@@ -45,7 +45,7 @@ export default class RNHeader extends PureComponent {
       backIconStyle,
       navigation,
       backIcon,
-      ...attributes,
+      ...attributes
     } = this.props;
     return (
       <ViewComponent
