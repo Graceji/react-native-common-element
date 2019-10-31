@@ -1,7 +1,7 @@
-# RN-Header
+# RNElements
 react-native Header component
 
-### 依赖react-native-vector-icons
+### 依赖 react-native-vector-icons
 `npm install --save react-native-vector-icons`
 - 自动方式：
 `react-native link`
