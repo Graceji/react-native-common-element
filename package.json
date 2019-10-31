@@ -1,0 +1,27 @@
+{
+  "name": "rnelements",
+  "version": "0.0.1",
+  "description": "React-Native Elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graceji/RNElements.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Graceji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Graceji/RNElements/issues"
+  },
+  "homepage": "https://github.com/Graceji/RNElements#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-native": "^0.61.3"
+  }
+}
