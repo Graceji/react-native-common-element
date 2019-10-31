@@ -18,6 +18,7 @@ export default class RNHeader extends PureComponent {
     statusBarProps: PropTypes.object,
     barStyle: PropTypes.oneOf(['default', 'light-content', 'dark-content']),
     children: nodeType,
+    containerStyle: styleType,
     leftContainerStyle: styleType,
     centerContainerStyle: styleType,
     rightContainerStyle: styleType,
