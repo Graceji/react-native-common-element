@@ -1,6 +1,6 @@
 {
-  "name": "rnelements",
-  "version": "0.0.2",
+  "name": "react-native-common-element",
+  "version": "0.1.3",
   "description": "React-Native Elements",
   "main": "index.js",
   "scripts": {
@@ -21,9 +21,10 @@
   },
   "homepage": "https://github.com/Graceji/RNElements#readme",
   "dependencies": {
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
     "react": "^16.11.0",
-    "react-native": "^0.61.3",
     "react-native-vector-icons": "^6.6.0"
   }
 }
