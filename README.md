@@ -1,5 +1,4 @@
-# RNElements
-react-native Header component
+# react-native-common-element
 
 ### 依赖 react-native-vector-icons
 `npm install --save react-native-vector-icons`
