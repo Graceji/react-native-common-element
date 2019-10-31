@@ -26,7 +26,7 @@
       }
 
       if (children.text) {
-        return renderNode(Text, children.text, { numberOfLines:1, ...children })
+        return renderNode(Text, children.text, { numberOfLines: 1, ...children })
       }
 
       return renderNode(View, children);
