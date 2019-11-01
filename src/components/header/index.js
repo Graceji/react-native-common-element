@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { View, StatusBar, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { View, StatusBar, TouchableOpacity, Image } from 'react-native';
 import { styleType, nodeType } from '../../utils';
 import Children from './_components/children';
 import styles from './styles';
@@ -69,11 +68,7 @@ export default class RNHeader extends PureComponent {
               <TouchableOpacity style={[styles.backIcon, backIconStyle]}
                 // onPress={}
               >
-                <Icon name="angle-left" size={40} color="#333" />
-                {/* {
-                  backIcon
-                  || <Icon name="angle-left" size={40} color="#333" />
-                } */}
+                <Image src={require('../../assets/imgs/arrowLeft.png')} style={styles.backIconImg} />
               </TouchableOpacity>
             ))
             || null

@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { screenUtil } from '../../utils';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,6 +10,10 @@ const styles = StyleSheet.create({
   backIcon: {
     // marginLeft: 20,
     // padding: 20,
+  },
+  backIconImg: {
+    width: screenUtil.scaleSize(52),
+    height: screenUtil.scaleSize(52),
   }
 });
 

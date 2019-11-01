@@ -1,5 +1,7 @@
 # react-native-common-element
 
+## 暂时只适配ios端
+
 ### 依赖 react-native-vector-icons
 `npm install --save react-native-vector-icons`
 - 自动方式：
