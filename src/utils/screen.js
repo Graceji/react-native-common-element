@@ -28,7 +28,7 @@ const screenUtil = {
     const scaleWidth = screenW / designW;
     const scaleHeight = screenH / designH;
     const scale = Math.min(scaleWidth, scaleHeight);
-    const actualFontScale = allowFontScaling ? 1 : fontScale;
+    const actualFontScale = !allowFontScaling ? 1 : fontScale;
     return Math.round(size * scale / actualFontScale + 0.5);
   },
   

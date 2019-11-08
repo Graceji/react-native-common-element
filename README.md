@@ -56,6 +56,11 @@ import { RNHeader } from 'react-native-common-element';
 ### Util
 ✅ `screenUtil` - 尺寸适配
 
+方法名|方法|参数
+:--|:--:|:--:|--
+字体缩放|setSpText|(size) => {}|
+大小缩放|scaleSize|(size, allowFontScaling) => {}
+
 ✅ `isIphoneX` - 判断是否是iphoneX系列
 
 ✅ `screenW` - 屏幕宽度
