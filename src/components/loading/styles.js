@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '100%',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
   },
   wrap: {
     justifyContent: 'center',

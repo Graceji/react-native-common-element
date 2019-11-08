@@ -32,6 +32,8 @@ export default class RNEchart extends PureComponent {
     ]),
     spinnerSize: PropTypes.number,
     contentTextStyle: styleType,
+    containerStyle: styleType,
+    noText: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -59,18 +61,20 @@ export default class RNEchart extends PureComponent {
   };
 
   renderLoadingView () {
-    const { message, spinnerColor, spinnerType, spinnerSize, contentTextStyle } = this.props;
+    const { message, spinnerColor, spinnerType, spinnerSize, contentTextStyle, noText } = this.props;
     const { animationConfig } = this.state;
     if (this.state.loading) {
       return (
-        <AnimatableView style={styles.container} {...animationConfig}>
+        <AnimatableView style={[styles.container, containerStyle]} {...animationConfig}>
           <View style={styles.wrap}>
             <Spinner
               color={spinnerColor}
               type={spinnerType}
               size={spinnerSize}
             />
-            <Text style={[styles.text, contentTextStyle]}>{message}</Text>
+            {
+              noText && <Text style={[styles.text, contentTextStyle]}>{message}</Text>
+            }
           </View>
         </AnimatableView>
       );
