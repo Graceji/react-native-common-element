@@ -68,7 +68,7 @@ export default class RNHeader extends PureComponent {
               <TouchableOpacity style={[styles.backIcon, backIconStyle]}
                 // onPress={}
               >
-                <Image src={require('../../assets/imgs/arrowLeft.png')} style={styles.backIconImg} />
+                <Image source={require('../../assets/imgs/arrowLeft.png')} style={styles.backIconImg} />
               </TouchableOpacity>
             ))
             || null
