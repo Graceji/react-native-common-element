@@ -50,6 +50,8 @@ import { RNHeader } from 'react-native-common-element';
 
 ❌`RNCountDown` - 倒计时组件
 
+❌`RNLoading` - Loading
+
 
 ### Util
 ✅ `screenUtil` - 尺寸适配
