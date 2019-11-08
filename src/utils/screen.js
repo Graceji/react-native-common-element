@@ -24,7 +24,13 @@ const screenUtil = {
   /**
    * 字体缩放
    */
-  // setSpText: (size,)
+  setSpText: (size, allowFontScaling = false) => {
+    const scaleWidth = screenW / designW;
+    const scaleHeight = screenH / designH;
+    const scale = Math.min(scaleWidth, scaleHeight);
+    const actualFontScale = allowFontScaling ? 1 : fontScale;
+    return Math.round(size * scale / actualFontScale + 0.5);
+  },
   
   /**
   * 尺寸缩放
