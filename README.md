@@ -22,6 +22,8 @@ import { RNHeader } from 'react-native-common-element';
 ### Components
 ✅`RNHeader` - 页面头部
 
+✅`RNLoading` - Loading
+
 ❌`RNIcon` - Icon
 
 ❌`RNCollapse` - 折叠面板
@@ -49,8 +51,6 @@ import { RNHeader } from 'react-native-common-element';
 ❌`RNEchart` - 图表组件
 
 ❌`RNCountDown` - 倒计时组件
-
-❌`RNLoading` - Loading
 
 
 ### Util
