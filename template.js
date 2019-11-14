@@ -58,7 +58,7 @@ fs.mkdirSync(`./src/components/${fileName}`); // mkdir $1
 process.chdir(`./src/components/${fileName}`); // cd $1
 
 fs.writeFileSync('index.js', indexTep);
-fs.writeFileSync('style.js', styleTep);
+fs.writeFileSync('styles.js', styleTep);
 
 process.exit(0);
 
