@@ -73,7 +73,7 @@ export default class RNEchart extends PureComponent {
               size={spinnerSize}
             />
             {
-              noText && <Text style={[styles.text, contentTextStyle]}>{message}</Text>
+              !noText && <Text style={[styles.text, contentTextStyle]}>{message}</Text>
             }
           </View>
         </AnimatableView>

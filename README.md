@@ -24,6 +24,8 @@ import { RNHeader } from 'react-native-common-element';
 
 ✅`RNLoading` - Loading
 
+✅`RNModal` - Modal
+
 ❌`RNIcon` - Icon
 
 ❌`RNCollapse` - 折叠面板
@@ -31,8 +33,6 @@ import { RNHeader } from 'react-native-common-element';
 ❌`RNDropDown` - 下拉框
 
 ❌`RNInput` - Input
-
-❌`RNModal` - Modal
 
 ❌`RNPicker` - 选择器
 
