@@ -26,7 +26,7 @@ import { RNHeader } from 'react-native-common-element';
 
 ✅`RNModal` - Modal
 
-### 使用方法
+#### 使用方法
 ---
 ```
 <RNModal
@@ -53,7 +53,7 @@ import { RNHeader } from 'react-native-common-element';
 
 ✅`RNDropDown` - 下拉框
 
-### 使用方法
+#### 使用方法
 ---
 ```
 <RNDropDown
@@ -72,7 +72,7 @@ import { RNHeader } from 'react-native-common-element';
   overlayStyle = {} // 下拉框container样式
   itemContainerStyle = {} // option container样式
   itemTextstyle = {} // option文本样式
-  handleChange = {(item) => {}} // 下拉选项option选择回调
+  handleChange = {(item, index) => { console.log(item, index); }} // 下拉选项option选择回调
 />
 ```
 

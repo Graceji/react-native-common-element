@@ -105,7 +105,7 @@
       
     }
 
-    _handleItemPress = (item) => () => {
+    _handleItemPress = (item, index) => () => {
       // dropDown item click
       const { handleChange } = this.props;
       handleChange && handleChange(index);
@@ -130,7 +130,7 @@
       return (
         <View key={index} style={[styles.itemContainer, itemContainerStyle]}>
           <TouchableOpacity
-            onPress={this._handleItemPress(item)}
+            onPress={this._handleItemPress(item, index)}
           >
             <Text style={[styles.itemText, itemTextstyle]}>{item}</Text>
           </TouchableOpacity>
