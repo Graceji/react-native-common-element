@@ -26,6 +26,7 @@ import { RNHeader } from 'react-native-common-element';
 
 ✅`RNModal` - Modal
 
+### 使用方法
 ---
 ```
 <RNModal
@@ -34,26 +35,31 @@ import { RNHeader } from 'react-native-common-element';
   animationInTiming={} // 入场动画持续时间，default：300
   animationOutTiming={} // 消失动画持续时间，default：300
   isVisible={} // modal隐藏与显示状态，bool, required,
-  backDropOpacity={} // modal背景透明度，default：0.7
-  backDropColor="" // modal背景颜色，default：'#000'
-  hasBackDrop={} // 是否需要背景，default：true
-  onBackDropPress={() => {}} // 点击背景回调函数
+  backDropOpacity={} // modal遮罩透明度，default：0.7
+  backDropColor="" // modal遮罩颜色，default：'#000'
+  hasBackDrop={} // 是否需要遮罩，default：true
+  onBackDropPress={() => {}} // 点击遮罩回调函数
   onModalWillHide={} // modal消失之前回调
   onModalHide={} // modal消失后回调
   onModalShow={} // modal显示后回调
   onModalWillShow={} // modal显示之前回调
   contentStyle={} // 内容style
+  useNativeDriver={} // 使用原生动画驱动，default: false
 >
   {/* children: modal内容，reuqired */}
   {children}
 </RNModal>
 ```
 
+✅`RNDropDown` - 下拉框
+
+### 使用方法
+---
+
+
 ❌`RNIcon` - Icon
 
 ❌`RNCollapse` - 折叠面板
-
-❌`RNDropDown` - 下拉框
 
 ❌`RNInput` - Input
 

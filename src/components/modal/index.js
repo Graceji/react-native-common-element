@@ -129,7 +129,7 @@
       }
       this.isTransitioning = true;
       const { backDropOpacity, animationInTiming, isVisible, onModalShow, onModalWillShow } = this.props;
-      if (this.backDropRef) {
+      if (this.props.hasBackDrop && this.backDropRef) {
         this.backDropRef.current.transitionTo({
           opacity: backDropOpacity,
         });
@@ -162,7 +162,7 @@
       }
       this.isTransitioning = true;
       const { animationOutTiming, isVisible, onModalHide, onModalWillHide } = this.props;
-      if (this.backDropRef) {
+      if (this.props.hasBackDrop && this.backDropRef) {
         this.backDropRef.current.transitionTo({
           opacity: 0,
         });
@@ -254,7 +254,7 @@
       return (
         <Modal
           transparent
-          isVisible={this.state.isVisible}
+          visible={this.state.isVisible}
           {...otherProps}
         >
           {hasBackDrop && backDrop}
