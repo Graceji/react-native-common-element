@@ -25,6 +25,7 @@ import { RNHeader } from 'react-native-common-element';
 ✅`RNLoading` - Loading
 
 ✅`RNModal` - Modal
+
 ---
 ```
 <RNModal
