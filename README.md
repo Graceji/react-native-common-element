@@ -25,6 +25,28 @@ import { RNHeader } from 'react-native-common-element';
 ✅`RNLoading` - Loading
 
 ✅`RNModal` - Modal
+---
+```
+<RNModal
+  animationIn="" // 入场动画类型，default：'slideInUp'
+  animationOut="" // 消失动画类型，default：'slideOutDown'
+  animationInTiming={} // 入场动画持续时间，default：300
+  animationOutTiming={} // 消失动画持续时间，default：300
+  isVisible={} // modal隐藏与显示状态，bool, required,
+  backDropOpacity={} // modal背景透明度，default：0.7
+  backDropColor="" // modal背景颜色，default：'#000'
+  hasBackDrop={} // 是否需要背景，default：true
+  onBackDropPress={() => {}} // 点击背景回调函数
+  onModalWillHide={} // modal消失之前回调
+  onModalHide={} // modal消失后回调
+  onModalShow={} // modal显示后回调
+  onModalWillShow={} // modal显示之前回调
+  contentStyle={} // 内容style
+>
+  {/* children: modal内容，reuqired */}
+  {children}
+</RNModal>
+```
 
 ❌`RNIcon` - Icon
 
