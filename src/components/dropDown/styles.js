@@ -39,6 +39,9 @@
       paddingLeft: 15,
       paddingVertical: 9,
     },
+    itemActiveContainer: {
+      backgroundColor: '#F1F6FF',
+    },
     itemText: {
       fontSize: 15,
       color: '#333',

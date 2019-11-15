@@ -25,6 +25,8 @@
       itemContainerStyle: styleType,
       itemTextstyle: styleType,
       handleChange: PropTypes.func,
+      itemActiveContainerStyle: styleType,
+      itemActiveTextstyle: styleType,
     };
 
     state = {
@@ -32,6 +34,7 @@
       left: 0,
       pickVal: this.props.pickVal,
       isShow: false,
+      activeIndex: this.props.data.indexOf(this.props.pickVal),
     };
 
     dropDown = React.createRef();
@@ -108,9 +111,10 @@
     _handleItemPress = (item, index) => () => {
       // dropDown item click
       const { handleChange } = this.props;
-      handleChange && handleChange(index);
+      handleChange && handleChange(item, index);
       this.setState({
         pickVal: item,
+        activeIndex: index,
       }, () => {
         this.setState({
           isShow: false,
@@ -124,15 +128,33 @@
     }
 
     _renderItem = ({ item, index }) => {
-      const { itemContainerStyle, itemTextstyle } = this.props;
+      const { itemContainerStyle, itemTextstyle, itemActiveContainerStyle, itemActiveTextstyle } = this.props;
+      const { activeIndex } = this.state;
+      
       if (!item) return null;
        
       return (
-        <View key={index} style={[styles.itemContainer, itemContainerStyle]}>
+        <View
+          key={`${item}-${index}`}
+          style={[
+            styles.itemContainer,
+            index === activeIndex && styles.itemActiveContainer,
+            itemContainerStyle,
+            index === activeIndex && itemActiveContainerStyle,
+          ]}
+        >
           <TouchableOpacity
             onPress={this._handleItemPress(item, index)}
           >
-            <Text style={[styles.itemText, itemTextstyle]}>{item}</Text>
+            <Text
+              style={[
+                styles.itemText,
+                itemTextstyle,
+                index === activeIndex && itemActiveTextstyle,
+              ]}
+            >
+              {item}
+            </Text>
           </TouchableOpacity>
         </View>
       );
@@ -173,6 +195,7 @@
                 <FlatList
                   data={data}
                   renderItem={this._renderItem}
+                  keyExtractor={(_, index) => index.toString()}
                 />
               </View>
             </AnimatableView>

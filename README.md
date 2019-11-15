@@ -58,7 +58,8 @@ import { RNHeader } from 'react-native-common-element';
 ```
 <RNDropDown
   data={['我爱中国', '祖国万岁', '身体健康']} // 数据源，Required
-  containerStyle = {} // container样式
+  pickVal="祖国万岁" // 默认选中值
+  containerStyle = {{}} // container样式
   renderBase = {() => {}} // 自定义头部
   pickerStyle={{
     width: '100%',
@@ -68,10 +69,12 @@ import { RNHeader } from 'react-native-common-element';
     borderColor: '#979797',
     borderRadius: 3,
   }} // 头部container样式
-  pickTextStyle = {} // 头部文字样式
-  overlayStyle = {} // 下拉框container样式
-  itemContainerStyle = {} // option container样式
-  itemTextstyle = {} // option文本样式
+  pickTextStyle = {{}} // 头部文字样式
+  overlayStyle = {{}} // 下拉框container样式
+  itemContainerStyle = {{}} // option container样式
+  itemTextstyle = {{}} // option文本样式
+  itemActiveContainerStyle= {{}} // option 高亮container样式
+  itemActiveTextstyle= {{}} // option高亮文字样式
   handleChange = {(item, index) => { console.log(item, index); }} // 下拉选项option选择回调
 />
 ```
