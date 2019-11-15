@@ -12,6 +12,7 @@
       pickerStyle: {
         height: 32,
       },
+      data: [],
     };
 
     static propTypes = {
