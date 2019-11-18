@@ -75,7 +75,20 @@ import { RNHeader } from 'react-native-common-element';
   itemTextstyle = {{}} // option文本样式
   itemActiveContainerStyle= {{}} // option 高亮container样式
   itemActiveTextstyle= {{}} // option高亮文字样式
-  handleChange = {(item, index) => { console.log(item, index); }} // 下拉选项option选择回调
+  // 下拉选项option选择回调
+  handleChange = {(item, index) => { console.log(item, index); }}
+/>
+```
+
+✅`RNEchart` - 图表组件
+
+#### 使用方法
+---
+```
+<RNEchart
+  option={option} // option
+  width={375} // 宽度值
+  height={500} // 高度值
 />
 ```
 
@@ -98,8 +111,6 @@ import { RNHeader } from 'react-native-common-element';
 ❌`RNPlaceHolder` - 占位图
 
 ❌`RNButton` - Button
-
-❌`RNEchart` - 图表组件
 
 ❌`RNCountDown` - 倒计时组件
 

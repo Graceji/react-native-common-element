@@ -61,7 +61,15 @@ export default class RNEchart extends PureComponent {
   };
 
   renderLoadingView () {
-    const { message, spinnerColor, spinnerType, spinnerSize, contentTextStyle, noText } = this.props;
+    const {
+      message,
+      spinnerColor,
+      spinnerType,
+      spinnerSize,
+      contentTextStyle,
+      noText,
+      containerStyle,
+    } = this.props;
     const { animationConfig } = this.state;
     if (this.state.loading) {
       return (

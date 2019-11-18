@@ -31,8 +31,8 @@ const renderChart = (props) => {
   const width = props.width ? `${props.width}px` : 'auto';
   const height = `${props.height || 230}px`;
   return `
-    document.getElementById('main').style.width = "${width}px";
-    document.getElementById('main').style.height = "${height}px";
+    document.getElementById('main').style.width = "${width}";
+    document.getElementById('main').style.height = "${height}";
     var myChart = echarts.init(document.getElementById('main'));
     myChart.setOption(${toString(props.option)});
 
@@ -61,6 +61,10 @@ export default class RNEchart extends PureComponent {
 
   webview = React.createRef();
 
+  componentDidUpdate () {
+    this.webview.current.reload();
+  }
+
   _handleLoadEnd = () => {
     // 当加载结束调用，不管是成功还是失败
     this.setState({
@@ -69,8 +73,8 @@ export default class RNEchart extends PureComponent {
   }
 
   // 返回一个加载指示器
-  _handleRenderLoading = () => (
-    <View style={styles().loadingContainer}>
+  _handleRenderLoading = ({ width, height }) => () => (
+    <View style={styles({ width, height }).loadingContainer}>
       <RNLoading />
     </View>
   );
@@ -84,10 +88,11 @@ export default class RNEchart extends PureComponent {
     
 
   render () {
+    const { width, height } = this.props;
     return (
       <WebView
         ref={this.webview}
-        style={styles.webView}
+        style={styles({ width, height }).webView}
         originWhitelist={['*']}
         source={Platform.OS === 'ios' ? tpl : { uri: 'file///android_asset/tpl.html' }}
         injectedJavaScript={renderChart(this.props)} // 设置 js 字符串，在网页加载之前注入的一段JS代码
@@ -95,7 +100,7 @@ export default class RNEchart extends PureComponent {
         bounces={false} // 控制当 webview 内容到达底部时是否进行回弹
         startInLoadingState={this.state.loading} // 控制WebView第一次加载时是否显示加载视图
         onLoadEnd={this._handleLoadEnd}
-        renderLoading={this._handleRenderLoading}
+        renderLoading={this._handleRenderLoading({ width, height })}
         onMessage={this._handleMessage}
       />
     );
