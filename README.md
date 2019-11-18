@@ -118,7 +118,6 @@ import { RNHeader } from 'react-native-common-element';
 ### Util
 ✅ `screenUtil` - 尺寸适配
 
-
 |方法名|方法|参数|
 :----|:----:|:-----:|---
 |字体缩放|setSpText|(size) => {}|
@@ -130,3 +129,9 @@ import { RNHeader } from 'react-native-common-element';
 ✅ `screenW` - 屏幕宽度
 
 ✅ `screenH` - 屏幕高度
+
+name | 价格 |  数量  
+-|-|-
+香蕉 | $1 | 5 |
+苹果 | $1 | 6 |
+草莓 | $1 | 7 |
