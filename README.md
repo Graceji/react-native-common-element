@@ -119,11 +119,8 @@ import { RNHeader } from 'react-native-common-element';
 ✅ `screenUtil` - 尺寸适配
 
 方法名|方法|参数
-
-:-|:-:|:-:|-
-
+:----|:----:|:-----:|---
 字体缩放|setSpText|(size) => {}
-
 大小缩放|scaleSize|(size, allowFontScaling) => {}
 
 
