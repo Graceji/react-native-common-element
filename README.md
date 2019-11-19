@@ -99,8 +99,8 @@ import { RNHeader } from 'react-native-common-element';
 ```
 <RNCollapse
   isCollapse // 面板初始状态
-  iconText="我是组件" // 头部container style
-  collapseContainerStyle={styles.collapse} // 
+  iconText="我是组件" // 头部文字
+  collapseContainerStyle={styles.collapse} // 头部container style
   iconStyle={styles.icon} // 头部icon style
   iconTextStyle={styles.text} // 头部文字style
   handlePress={() => {}} // 头部点击回调
