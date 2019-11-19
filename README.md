@@ -92,9 +92,26 @@ import { RNHeader } from 'react-native-common-element';
 />
 ```
 
-❌`RNIcon` - Icon
+✅`RNCollapse` - 折叠面板
 
-❌`RNCollapse` - 折叠面板
+#### 使用方法
+---
+```
+<RNCollapse
+  isCollapse // 面板初始状态
+  iconText="我是组件" // 头部container style
+  collapseContainerStyle={styles.collapse} // 
+  iconStyle={styles.icon} // 头部icon style
+  iconTextStyle={styles.text} // 头部文字style
+  handlePress={() => {}} // 头部点击回调
+>
+  <View style={{ width: '100%' }}>
+    <Text>折叠面板</Text>
+  </View>
+</RNCollapse>
+```
+
+❌`RNIcon` - Icon
 
 ❌`RNInput` - Input
 
