@@ -7,7 +7,11 @@
       ...StyleSheet.absoluteFill,
       backgroundColor: '#000',
       opacity: 0,
-    }
+    },
+    content: {
+      flex: 1,
+      justifyContent: 'center',
+    },
   });
 
   export default StyleSheet.flatten(styles);

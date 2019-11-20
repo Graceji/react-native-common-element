@@ -84,7 +84,7 @@
     // the modal visible during the exit animation, even if the user has already change the
     // isVisible prop to false.
     state = {
-      isVisible: this.props.isVisible,
+      isVisible: false,
       showContent: true,
     };
 
