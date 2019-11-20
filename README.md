@@ -1,6 +1,6 @@
 # react-native-common-element
 
-## 暂时只适配ios端
+### 暂时只适配ios端
 
 ### 安装
 `npm i -S react-native-common-element`
@@ -111,6 +111,40 @@ import { RNHeader } from 'react-native-common-element';
 </RNCollapse>
 ```
 
+✅`RNPlaceHolder` - 占位图
+
+#### 使用方法
+---
+```
+<RNPlaceholder
+  animation="fade" // 暂不支持定制化
+  isReady={false}
+  whenReadyRender={() => <Text>加载完成</Text>}
+>
+  <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center' }}>
+    <Media
+      color="pink" // 背景色
+      width={90} // 宽度 number
+      height={90} // 高度 number
+      style={{}} // 样式
+      borderRadius={45} // 圆角 number
+      noMargin // 是否有marginBottom
+    />
+    <View style={{ flex: 1, marginLeft: 12 }}>
+      <Line
+        noMargin // 是否有marginBottom
+        color="red" // 背景色
+        width="50%" // 宽度 number or string
+        textSize={12} // 基准大小
+        style={{}} // 样式
+      />
+      <Line color="red" />
+      <Line color="red" />
+    </View>
+  </View>
+</RNPlaceholder>
+```
+
 ❌`RNIcon` - Icon
 
 ❌`RNInput` - Input
@@ -124,8 +158,6 @@ import { RNHeader } from 'react-native-common-element';
 ❌`RNToTop` - 返回头部
 
 ❌`RNTreeSelect` - 树型结构
-
-❌`RNPlaceHolder` - 占位图
 
 ❌`RNButton` - Button
 
