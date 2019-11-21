@@ -6,10 +6,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: '#3673ee',
+    paddingTop: screenUtil.scaleSize(screenUtil.isIphoneXTop()),
+    height: screenUtil.scaleSize(88 + screenUtil.isIphoneXTop()),
+    paddingHorizontal: screenUtil.scaleSize(25),
   },
   backIcon: {
-    // marginLeft: 20,
-    // padding: 20,
   },
   backIconImg: {
     width: screenUtil.scaleSize(52),

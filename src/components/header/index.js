@@ -9,6 +9,7 @@ export default class RNHeader extends PureComponent {
   static defaultProps = {
     barStyle: 'light-content',
     children: [],
+    backgroundColor: '#3673ee',
   };
 
   static propTypes= {
@@ -27,6 +28,7 @@ export default class RNHeader extends PureComponent {
     navigation: PropTypes.object,
     backIconStyle: styleType,
     backIcon: nodeType,
+    backgroundColor: PropTypes.string,
   };
 
   render () {
@@ -45,12 +47,14 @@ export default class RNHeader extends PureComponent {
       backIconStyle,
       navigation,
       backIcon,
+      backgroundColor,
       ...attributes
     } = this.props;
     return (
       <ViewComponent
         style={[
           styles.container,
+          backgroundColor && { backgroundColor },
           containerStyle,
         ]}
         {...attributes}

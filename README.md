@@ -22,6 +22,26 @@ import { RNHeader } from 'react-native-common-element';
 ### Components
 ✅`RNHeader` - 页面头部
 
+#### 使用方法
+---
+```
+<RNHeader
+  backgroundColor="#3673ee" // 背景色
+  leftComponent={{
+    text: '返回',
+    style: { color: '#fff' },
+  }} // 左侧组件
+  rightcomponent={<MyCustomComponent />}
+  centerComponent={{}} // 中间组件
+  leftContainerStyle={{}} // 左侧组件样式
+  centerContainerStyle={{}} // 中间组件样式
+  rightContainerStyle={{}} // 右侧组件样式
+  containerStyle={} // container style
+  barStyle={} // 状态栏样式
+  statusBarProps={} // 状态栏props
+/>
+```
+
 ✅`RNLoading` - Loading
 
 ✅`RNModal` - Modal
