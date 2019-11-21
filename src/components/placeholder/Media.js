@@ -29,6 +29,7 @@
         height,
         style,
         noMargin,
+        borderRadius,
         ...props
       } = this.props;
   
