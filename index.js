@@ -5,3 +5,4 @@ export { default as RNEchart } from './src/components/echart'; // Echart
 export { default as RNCollapse } from './src/components/collapse'; // collapse 折叠面板
 export { default as RNDropDown } from './src/components/dropDown'; // dropdown 下拉菜单
 export { RNPlaceholder, Line, Media } from './src/components/placeholder'; // 占位图
+export { default as RNPicker } from './src/components/picker'; // 选择器

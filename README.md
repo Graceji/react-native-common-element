@@ -165,11 +165,31 @@ import { RNHeader } from 'react-native-common-element';
 </RNPlaceholder>
 ```
 
-❌`RNIcon` - Icon
+✅`RNPicker` - 选择器
+
+#### 使用方法
+---
+```
+<RNPicker
+  isVisible={this.state.isVisible} // 可见状态
+  toggleModal={(status) => { this.setState({ isVisible: status })}} // 切换可见状态函数
+  pickerData={['2017年', '2018年', '2019年', '2020年', '2021年']} // 数据源
+  selectedValue={this.state.selectedVal} // 选中项
+  selectConfirm={(selectedVal) => {
+    this.setState({
+      selectedVal,
+    })
+  }} // 点击头部确认函数
+  cancelBtnText="取消" // 取消按钮文字，默认“取消”
+  confirmBtnText="确认" // 确认按钮文字，默认“确认”
+  cancelBtnTextColor="" // 取消按钮文字颜色
+  confirmBtnTextColor="" // 确认按钮文字颜色
+  pickerFontColor="" // 选择项文字颜色
+  pickerFontSize="" // 选择项文字大小
+/>
+```
 
 ❌`RNInput` - Input
-
-❌`RNPicker` - 选择器
 
 ❌`RNAngle` - 三角形
 
